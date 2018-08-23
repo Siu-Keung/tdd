@@ -41,9 +41,17 @@ public class PermutationGeneratorTest {
         List<String> result = PermutationGenerator.generatePermutation(input);
         //then
         assertThat(result, is(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba")));
-
     }
 
+    @Test
+    public void should_get_result_length_24_given_abcd(){
+        //given
+        String input = "abcd";
+        //when
+        List<String> result = PermutationGenerator.generatePermutation(input);
+        //then
+        assertThat(result.size(), is(24));
+    }
 
 
 
