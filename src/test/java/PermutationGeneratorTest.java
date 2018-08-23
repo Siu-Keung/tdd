@@ -53,6 +53,4 @@ public class PermutationGeneratorTest {
         assertThat(result.size(), is(24));
     }
 
-
-
 }
