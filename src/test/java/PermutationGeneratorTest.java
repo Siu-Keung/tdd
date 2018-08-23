@@ -22,6 +22,7 @@ public class PermutationGeneratorTest {
         //then
         assertThat(result, is(Arrays.asList("a")));
     }
+
     @Test
     public void should_get_ab_ba_given_ab(){
         //given
@@ -31,4 +32,19 @@ public class PermutationGeneratorTest {
         //then
         assertThat(result,is(Arrays.asList("ab","ba")));
     }
+
+    @Test
+    public void should_get_abc_acb_bac_bca_cba_cab_given_abc(){
+        //given
+        String input = "abc";
+        //when
+        List<String> result = PermutationGenerator.generatePermutation(input);
+        //then
+        assertThat(result, is(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba")));
+
+    }
+
+
+
+
 }
